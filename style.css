@@ -1,4 +1,4 @@
- /* ============================
+/* ============================
    ✅ GLOBAL & RESET STYLES
 ============================= */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
@@ -713,7 +713,17 @@ header {
   clear: both;
  }
 
-/* about css start */
+
+/* About section css start */
+ 
+
+:root {
+  --vibrant-purple: #6C63FF;
+  --bg-accent: #00C9A7;
+  --white: #ffffff;
+}
+
+/* About Section Styles */
 
 .main-image {
   width: 100%;
@@ -766,6 +776,13 @@ header {
   font-weight: 600;
   letter-spacing: 2px;
   color: green;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .small-image {
@@ -832,7 +849,7 @@ header {
   box-shadow: 0 10px 25px rgba(102, 144, 163, 0.8);
 }
 
-/* Responsive Fix for About Section */
+/* Responsive Layout Fixes */
 
 @media (max-width: 991px) {
   .vertical-text {
@@ -841,7 +858,7 @@ header {
 
   .main-image {
     height: auto;
-    max-height: 350px;
+    max-height: 360px;
     border-radius: 18px;
   }
 
@@ -849,12 +866,11 @@ header {
     position: relative;
     bottom: auto;
     left: auto;
-    width: 220px;
-    height: 220px;
-    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    margin: -50px auto 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    z-index: 1;
   }
 
   .badge-box {
@@ -864,21 +880,11 @@ header {
     font-size: 12px;
   }
 
-  .green-dot {
-    display: none;
-  }
-
   .btn-gradient {
     width: 100%;
     justify-content: center;
     padding: 12px 20px;
     font-size: 15px;
-  }
-
-  .clients {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
   }
 
   .clients span {
@@ -887,44 +893,78 @@ header {
     margin-top: 8px;
   }
 
-  .icon-circle {
-    width: 40px;
-    height: 40px;
-  }
-
-  .icon-circle svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-@media (max-width: 576px) {
-  .small-image {
-    width: 180px;
-    height: 180px;
-  }
-
-  .main-image {
-    max-height: 280px;
-  }
-
-  .btn-gradient {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
-
-  .display-6 {
-    font-size: 28px !important;
-  }
-
   .col-lg-5,
   .col-lg-7 {
     text-align: center !important;
   }
 }
 
-/* about css end */
+@media (max-width: 576px) {
+  .main-image {
+    max-height: 260px;
+  }
 
+  .small-image {
+    display: none !important; /* ✅ Hides the image on mobile */
+  }
+
+  .display-6 {
+    font-size: 26px !important;
+  }
+
+  .text-muted,
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .check-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .clients img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-circle svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image {
+    max-height: 220px;
+    border-radius: 14px;
+  }
+
+  .badge-box {
+    font-size: 11px;
+    padding: 5px 8px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .btn-gradient {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .display-6 {
+    font-size: 22px !important;
+  }
+}
+
+
+
+/* About Section CSS End */
 
 
  
