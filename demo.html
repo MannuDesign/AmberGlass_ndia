@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smooth Looping Slider</title>
+  <style>
+    :root {
+      --primary: #6690A3;
+      --secondary: #1A3446;
+      --white: #ffffff;
+      --black: #000000;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      margin: 40px 0;
+      color: var(--secondary);
+    }
+
+    .slider-container {
+      overflow: hidden;
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .slider-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 24s linear infinite;
+      width: max-content;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .slide {
+      width:400px;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: var(--primary);
+      color: var(--white);
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      font-weight: 500;
+      z-index: 2;
+    }
+
+    .hover-box {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(0, 0, 0, 0.85);
+      color: var(--white);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.4s ease;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .slide:hover .hover-box {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .view-all-btn {
+      display: block;
+      width: 160px;
+      margin: 30px auto 60px;
+      background: var(--secondary);
+      color: var(--white);
+      border: none;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .view-all-btn:hover {
+      background: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        width: 250px;
+      }
+
+      .hover-box {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slide {
+        width: 200px;
+      }
+
+      .hover-box {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="section-title">Upcoming Projects</h2>
+
+  <div class="slider-container">
+    <div class="slider-track">
+      <!-- Duplicate slides for smooth loop -->
+      <div class="slide">
+        <img src="imges/output1.jpg" alt="DLF 1">
+        
+        <div class="hover-box">This is DLF Phase 1 Project Details</div>
+      </div>
+
+      <div class="slide">
+        <img src="imges/output2.jpg" alt="Project 1">
+      
+        <div class="hover-box">Luxury + Comfort + Location</div>
+      </div>
+
+      <div class="slide">
+        <img src="imges/output3.jpg" alt="Project 2">
+        
+        <div class="hover-box">DLF Crest Premium Living</div>
+      </div>
+
+      <!-- Again same slides for smooth infinite scroll -->
+      <div class="slide">
+        <img src="imges/output4.jpg" alt="DLF 1 Repeat">
+        
+        <div class="hover-box">Back to First Slide - Seamless</div>
+      </div>
+
+      <div class="slide">
+        <img src="imges/output5.jpg" alt="Project 1 Repeat">
+       
+        <div class="hover-box">Repeating for smooth scroll</div>
+      </div>
+
+      <div class="slide">
+        <img src="https://i.ibb.co/Trz08sj/project2.jpg" alt="Project 2 Repeat">
+        
+        <div class="hover-box">Sector 54 | Repeat Flow</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="view-all-btn">View All</button>
+
+</body>
+</html>
