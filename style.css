@@ -1,4 +1,4 @@
- /* ============================
+/* ============================
    ✅ GLOBAL & RESET STYLES
 ============================= */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
@@ -386,6 +386,19 @@ header {
   margin: 0;
 }
 
+#mannucard {
+  background-color:transparent;
+  top:200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+ 
+
 /* ========= CARD-INFO WRAPPER ========= */
 .card-info-wrapper {
   position: absolute;
@@ -499,6 +512,19 @@ header {
   --opacity: 0.4;
 }
 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ========= INFO PANEL ========= */
 .infoList {
   position: relative;
@@ -539,14 +565,12 @@ header {
 }
 
 .info .name {
-  font-size: 1.5rem;
+  font-size:2rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-heading);
-  margin-bottom: 12px;
+  color: var(--text-heading);  
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  
 }
 
 .book-btn.bottom-fixed {
@@ -577,6 +601,62 @@ header {
   opacity: 0;
   display: none;
 }
+.card__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  padding: 0 10px;
+}
+
+.card.current--card .card__overlay {
+  opacity: 1;
+}
+
+.card__overlay .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.card__overlay .book-btn {
+  padding: 10px 24px;
+  background-color: #1a3446;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.card__overlay .book-btn:hover {
+  background-color: #218ab8;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
+
 
 /* ========= ANIMATIONS ========= */
 @keyframes fadeInUp {
@@ -625,6 +705,13 @@ header {
   object-fit: contain;
 }
 
+
+
+
+
+
+
+
 /* ========= RESPONSIVE MEDIA QUERIES ========= */
 @media (max-width: 992px) {
   :root {
@@ -652,6 +739,8 @@ header {
    padding:100px 0px 0px 0px;
     
   }
+ 
+  
 
   .card-info-wrapper {
     top:40%;
@@ -666,11 +755,27 @@ header {
    
   }
 
+#mannucard {
+  background-color: transparent;
+  z-index: 999;
+  margin-top: -100px;
+  padding-bottom:70px !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
   .infoList {
     position: static;
     transform: none;
     width: 100%;
-    padding:0px;
+  
   }
 
   .cardList__btn {
@@ -681,12 +786,12 @@ header {
 
   .info .name {
     font-size: 1.2rem;
-    margin-bottom: 6px;
+    margin-bottom:16px;
   }
 
   .info .text {
     font-size: 1rem;
-    padding-top: 10px;
+    margin-bottom:16px;
   }
 
   .book-btn.bottom-fixed {
