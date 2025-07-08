@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,38 +118,31 @@
 
   <!-- Mobile html end  -->
 
-
-  <div class="app">
+<div class="app">
+  <!-- Wrapper for cards and info -->
+  <div class="card-info-wrapper">
+    <!-- Cards -->
     <div class="cardList">
       <button class="cardList__btn btn btn--left">
-        <div class="icon"><svg>
-            <use xlink:href="#arrow-left"></use>
-          </svg></div>
+        <div class="icon"><svg><use xlink:href="#arrow-left"></use></svg></div>
       </button>
       <div class="cards__wrapper">
         <div class="card current--card">
-          <div class="card__image">
-            <img src="gallery/cardimg1 (1).jpeg" alt="img11" />
-          </div>
+          <div class="card__image"><img src="gallery/cardimg1 (1).jpeg" alt="img11" /></div>
         </div>
         <div class="card next--card">
-          <div class="card__image">
-            <img src="gallery/cardimg1 (2).jpeg" alt="Image 2" />
-          </div>
+          <div class="card__image"><img src="gallery/cardimg1 (2).jpeg" alt="Image 2" /></div>
         </div>
         <div class="card previous--card">
-          <div class="card__image">
-            <img src="gallery/cardimg1 (3).jpeg" alt="Image 3" />
-          </div>
+          <div class="card__image"><img src="gallery/cardimg1 (3).jpeg" alt="Image 3" /></div>
         </div>
       </div>
       <button class="cardList__btn btn btn--right">
-        <div class="icon"><svg>
-            <use xlink:href="#arrow-right"></use>
-          </svg></div>
+        <div class="icon"><svg><use xlink:href="#arrow-right"></use></svg></div>
       </button>
     </div>
 
+    <!-- Info -->
     <div class="infoList">
       <div class="info__wrapper">
         <div class="info current--info">
@@ -166,25 +159,17 @@
         </div>
       </div>
     </div>
-
-
-    <!-- background changes imges  -->
-    <div class="app__bg">
-      <div class="app__bg__image current--image">
-        <img src="gallery/img.jpeg" />
-      </div>
-
-      <div class="app__bg__image next--image">
-        <img src="gallery/img.jpeg" />
-      </div>3
-
-      <div class="app__bg__image previous--image">
-        <img src="gallery/img.jpeg" />
-      </div>
-    </div>
-    <!-- background changes imges  -->
-
   </div>
+
+  <!-- Background -->
+  <div class="app__bg">
+    <div class="app__bg__image current--image"><img src="gallery/img.jpeg" /></div>
+    <div class="app__bg__image next--image"><img src="gallery/img.jpeg" /></div>
+    <div class="app__bg__image previous--image"><img src="gallery/img.jpeg" /></div>
+  </div>
+</div>
+
+ 
 
   <div class="clearfix"></div>
 
@@ -228,7 +213,7 @@
 
 
   <!-- About Us Section Start -->
-  <div class="container py-5">
+  <div class="container mt-5">
     <div class="row align-items-center gy-5 flex-column flex-lg-row text-center text-lg-start">
       <!-- Left Image Section -->
       <div class="col-lg-5 position-relative" data-aos="fade-right" data-aos-duration="1200">
